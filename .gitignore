@@ -1,0 +1,54 @@
+node_modules
+dist
+dist-single
+.env
+# robot datasets are large and may be confidential
+src/datasets/
+src/data/**/*.mp4
+src/data/**/*.parquet
+
+
+# Data & simulation assets (large / restricted)
+data/
+# ...but src/data is app code (api.ts, mock.ts, types.ts), keep it; only data files inside stay out
+!src/data/
+src/data/**/*.parquet
+src/data/**/*.mp4
+src/data/meta/
+src/data/*.json
+datasets/
+episodes/
+*.hdf5
+*.h5
+*.zarr/
+*.mcap
+*.usd
+*.usda
+
+# Model checkpoints & training output
+checkpoints/
+outputs/
+runs/
+wandb/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Python / env
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.egg-info/
+
+# Media & OS junk
+*.mp4
+.DS_Store
+.ipynb_checkpoints/
+# evaluation runs from the GPU machine (videos, may contain team data)
+src/evals/
+
+# TypeScript build cache
+*.tsbuildinfo
